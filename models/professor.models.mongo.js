@@ -1,5 +1,4 @@
 var mongoose = require("mongoose")
-
 var ProfessorSchema = mongoose.Schema(
     {
         nome: {type:String,required:true},
@@ -8,6 +7,5 @@ var ProfessorSchema = mongoose.Schema(
         ai: {type:Object,required:true}   
     }
 )
-
 var ProfessorModel = mongoose.model("professores",ProfessorSchema)
 module.exports = ProfessorModel

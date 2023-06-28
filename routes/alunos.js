@@ -1,24 +1,25 @@
 var express = require('express');
 var router = express.Router();
-var ProfessoresServiceMongo = require('../services/teacher.service.mongo');
+var AlunosServiceMongo = require('../services/alunos.service.mongo.js');
 
 router.get('/list', (req, res, next) => {
-    ProfessoresServiceMongo.list(req, res);
+    AlunosServiceMongo.list(req, res);
 });
 
 router.post('/register', (req, res, next) => {
-    ProfessoresServiceMongo.register(req, res);
+    AlunosServiceMongo.register(req, res);
 });
 
 router.put('/update/:id', (req, res, next) => {
-    ProfessoresServiceMongo.update(req, res);
+    AlunosServiceMongo.update(req, res);
 });
 
 router.delete('/delete/:id', (req, res, next) => {
-    ProfessoresServiceMongo.delete(req, res);
+    AlunosServiceMongo.delete(req, res);
 });
 
 router.get('/retrieve/:id', (req, res, next) => {
-    ProfessoresServiceMongo.retrieve(req, res);
+    AlunosServiceMongo.retrieve(req, res);
 });
+
 module.exports = router;
